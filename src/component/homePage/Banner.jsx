@@ -1,4 +1,4 @@
-import banner from "@/assets/Tiles-2.avif"
+import banner from "@/assets/Hero.jpg"
 import Link from "next/link";
 
 const Banner = () => {
