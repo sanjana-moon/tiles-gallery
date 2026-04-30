@@ -2,17 +2,18 @@ import Link from 'next/link';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import logo from "@/assets/Logo.png"
 import Image from 'next/image';
+import NavLink from './NavLink';
 
 const Navbar = () => {
 
     const links = <>
-        <li><Link href={'/'}>Home</Link></li>
-        <li><Link href={'/main/allTiles'}>All Tiles</Link></li>
-        <li><Link href={'/main/myProfile'}>My Profile</Link></li>
+        <li><NavLink href={'/'}>Home</NavLink></li>
+        <li><NavLink href={'/main/allTiles'}>All Tiles</NavLink></li>
+        <li><NavLink href={'/main/myProfile'}>My Profile</NavLink></li>
     </>
 
     return (
-        <div className='navbar bg-base-100 shadow-sm sticky top-0'>
+        <div className='navbar bg-base-100 shadow-sm sticky top-0 left-0 z-1'>
             <div className="navbar mx-auto px-5 py-0">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -34,7 +35,7 @@ const Navbar = () => {
                     />
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 font-medium">
+                    <ul className="menu menu-horizontal px-1 font-medium gap-2">
                         {links}
                     </ul>
                 </div>

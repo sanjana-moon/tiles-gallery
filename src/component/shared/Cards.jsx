@@ -2,13 +2,14 @@ import Image from "next/image";
 
 const Cards = ({ card }) => {
     return (
-        <div className="card bg-base-100 shadow-sm rounded-xl p-3">
+        <div className="card bg-base-100 shadow-sm rounded-xl p-3 transition-transform duration-300 hover:scale-105">
             <figure className="max-h-50">
                 <Image
                     src={card.image}
                     alt={card.title}
                     width={400}
                     height={200}
+                    className="w-full h-full overflow-hidden"
                 />
             </figure>
             <div className="card-body">
