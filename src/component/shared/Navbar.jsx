@@ -38,7 +38,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link href={'/auth/login'} className="btn bg-[#384959] text-neutral-content hover:bg-[#88BDF2]">Login</Link>
+                    <Link href={'/auth/login'} className="btn bg-linear-to-r from-[#384959] to-[#88BDF2] text-neutral-content hover:from-[#88BDF2] hover:to-[#384959]">Login</Link>
                 </div>
             </div>
         </div>

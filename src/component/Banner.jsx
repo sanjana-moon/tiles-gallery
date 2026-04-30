@@ -19,7 +19,7 @@ const Banner = () => {
                             Discover elegant textures, vibrant colors, and timeless patterns that bring life
                             to your interiors. Your perfect aesthetic starts here.
                         </p>
-                        <Link href={'/main/allTiles'}><button className="btn bg-[#384959] hover:bg-[#88BDF2] text-white border-none">Browse now</button></Link>
+                        <Link href={'/main/allTiles'}><button className="btn bg-linear-to-r from-[#384959] to-[#88BDF2]  hover:from-[#88BDF2] hover:to-[#384959] text-white border-none">Browse now</button></Link>
                     </div>
                 </div>
             </div>
