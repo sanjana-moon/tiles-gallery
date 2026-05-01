@@ -6,10 +6,13 @@ const TopTilesSection = async () => {
     const topCards = await cards.slice(0, 4);
 
     return (
-        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-8 gap-5">
-            {
-                topCards.map(card => <Cards key={card.id} card={card}/>)
-            }
+        <div className="container mx-auto my-20">
+            <h3 className="text-3xl mb-6 font-bold text-[#384959]">Our Top Collection:</h3>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+                {
+                    topCards.map(card => <Cards key={card.id} card={card} />)
+                }
+            </div>
         </div>
     );
 };

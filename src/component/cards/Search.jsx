@@ -26,7 +26,7 @@ const Search = () => {
 
     return (
         <div className="">
-            <div className='flex items-center justify-end'>
+            <div className='flex items-center'>
                 <label className="input">
                     <FaSearch className='text-[#384959]' />
                     <input
@@ -37,7 +37,7 @@ const Search = () => {
                 </label>
                 <button
                     onClick={handleSearch}
-                    className="btn bg-linear-to-r from-[#384959] to-[#88BDF2] text-white">
+                    className="btn bg-linear-to-r from-[#384959] to-[#88BDF2] hover:from-[#384959] hover:to-[#384959] text-white">
                     Search</button>
             </div>
         </div>

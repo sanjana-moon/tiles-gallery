@@ -1,14 +1,14 @@
 [
     {
         "id": "tile_001",
-        "title": "Ceramic Blue Tile",
-        "description": "Premium ceramic tile with blue glaze finish",
-        "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
-        "category": "ceramic",
-        "price": 45.99,
+        "title": "Marble Gold Vein",
+        "description": "White marble with golden veins",
+        "image": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80",
+        "category": "marble",
+        "price": 95.0,
         "currency": "USD",
-        "dimensions": "60x60 cm",
-        "material": "Ceramic",
+        "dimensions": "80x80 cm",
+        "material": "Marble",
         "inStock": true
     },
     {
@@ -37,15 +37,15 @@
     },
     {
         "id": "tile_004",
-        "title": "Granite Dark Grey",
-        "description": "Durable granite tile for modern flooring",
-        "image": "https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=800&q=80",
-        "category": "granite",
-        "price": 65.0,
+        "title": "Golden Luxury Tile",
+        "description": "Premium gold textured decorative tile",
+        "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80",
+        "category": "luxury",
+        "price": 120.0,
         "currency": "USD",
         "dimensions": "60x60 cm",
-        "material": "Granite",
-        "inStock": false
+        "material": "Ceramic",
+        "inStock": true
     },
     {
         "id": "tile_005",
@@ -97,15 +97,15 @@
     },
     {
         "id": "tile_009",
-        "title": "Golden Luxury Tile",
-        "description": "Premium gold textured decorative tile",
-        "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80",
-        "category": "luxury",
-        "price": 120.0,
+        "title": "Granite Dark Grey",
+        "description": "Durable granite tile for modern flooring",
+        "image": "https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=800&q=80",
+        "category": "granite",
+        "price": 65.0,
         "currency": "USD",
         "dimensions": "60x60 cm",
-        "material": "Ceramic",
-        "inStock": true
+        "material": "Granite",
+        "inStock": false
     },
     {
         "id": "tile_010",
@@ -133,14 +133,14 @@
     },
     {
         "id": "tile_012",
-        "title": "Marble Gold Vein",
-        "description": "White marble with golden veins",
-        "image": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80",
-        "category": "marble",
-        "price": 95.0,
+        "title": "Ceramic Blue Tile",
+        "description": "Premium ceramic tile with blue glaze finish",
+        "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+        "category": "ceramic",
+        "price": 45.99,
         "currency": "USD",
-        "dimensions": "80x80 cm",
-        "material": "Marble",
+        "dimensions": "60x60 cm",
+        "material": "Ceramic",
         "inStock": true
     },
     {
