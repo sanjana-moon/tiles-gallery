@@ -1,4 +1,5 @@
 'use client'
+import { authClient } from '@/lib/auth-client';
 import { useForm } from 'react-hook-form';
 
 const RegisterPage = () => {
@@ -10,8 +11,23 @@ const RegisterPage = () => {
         formState: { errors },
     } = useForm()
 
-    const handleLogicFunc = (data) => {
-        console.log(data);
+    const handleRegisterFunc = async(data) => {
+        const {name, photo, email, password } = data;
+        const { data: res, error } = await authClient.signUp.email({
+            name: name,
+            email: email,
+            password: password,
+            image: photo,
+            callbackURL: "/",
+        });
+
+        console.log(res, error);
+        if(error){
+            alert(error.message)
+        }
+        if(res){
+            alert("signup successful")
+        }
     }
 
     return (
@@ -21,7 +37,7 @@ const RegisterPage = () => {
                     Register your account
                 </h2>
 
-                <form className="space-y-4" onSubmit={handleSubmit(handleLogicFunc)}>
+                <form className="space-y-4" onSubmit={handleSubmit(handleRegisterFunc)}>
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend">Name</legend>
                         <input
@@ -39,9 +55,9 @@ const RegisterPage = () => {
                             type="text"
                             className="input w-full"
                             placeholder="Enter your photo url"
-                            {...register("name", { required: "Name is required" })}
+                            {...register("photo", { required: "Photo URL is required" })}
                         />
-                        {errors.name && (<p className='text-red-500'>{errors.name.message}</p>)}
+                        {errors.photo && (<p className='text-red-500'>{errors.photo.message}</p>)}
                     </fieldset>
 
                     <fieldset className="fieldset">
@@ -61,9 +77,9 @@ const RegisterPage = () => {
                             type="password"
                             className="input w-full"
                             placeholder="Enter your password"
-                            {...register("email", { required: "Email is required" })}
+                            {...register("password", { required: "Password is required" })}
                         />
-                        {errors.email && (<p className='text-red-500'>{errors.email.message}</p>)}
+                        {errors.password && (<p className='text-red-500'>{errors.password.message}</p>)}
                     </fieldset>
 
                     <button className="btn w-full bg-slate-800 text-white">
