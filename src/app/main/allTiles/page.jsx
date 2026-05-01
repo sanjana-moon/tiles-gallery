@@ -1,14 +1,30 @@
-import Cards from "@/component/shared/Cards";
+import Cards from "@/component/cards/Cards";
+import CategoryFilter from "@/component/cards/CategoryFilter";
+import { getCards } from "@/component/cards/getCards";
+import Search from "@/component/cards/Search";
 
-const AllTilesPage = async() => {
-    const res = await fetch('https://tiles-gallery-beta.vercel.app/data.json');
-    const cards = await res.json()
+const AllTilesPage = async ({ searchParams }) => {
+
+    const { search, category } = await searchParams
+    const cards = await getCards()
+
+    let filteredCards = category ? cards.filter(card => card.category.toLowerCase() == category.toLowerCase()) : cards
+
+    if (search) {
+        filteredCards = filteredCards.filter(card =>
+            card.title.toLowerCase().includes(search.toLowerCase())
+        );
+    }
 
     return (
-        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-8 gap-5">
-            {
-                cards.map(card => <Cards key={card.id} card={card}/>)
-            }
+        <div className="container mx-auto  my-8">
+            <Search />
+            <CategoryFilter/>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-8 gap-5">
+                {
+                    filteredCards.map(card => <Cards key={card.id} card={card} />)
+                }
+            </div>
         </div>
     );
 };

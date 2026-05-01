@@ -27,7 +27,7 @@ const MarqueSection = () => {
     return (
         <div className='container flex justify-between items-center mx-auto gap-4 px-2 py-4 bg-gray-200 my-8'>
             <button className='btn bg-linear-to-r from-[#384959] to-[#88BDF2] text-white'>Latest News</button>
-            <Marquee pauseOnHover={true} speed={100} >
+            <Marquee pauseOnHover={true} speed={90} >
                 {
                     tiles.map(tile => <span key={tile.id} className="mx-6">{tile.title}</span>)
                 }
