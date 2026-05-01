@@ -19,7 +19,7 @@ const AllTilesPage = async ({ searchParams }) => {
 
     return (
         <div className="container mx-auto my-8">
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center flex-col-reverse gap-4 md:flex-row">
                 <CategoryFilter />
                 <Search />
             </div>

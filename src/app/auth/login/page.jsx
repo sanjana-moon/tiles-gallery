@@ -2,6 +2,7 @@
 import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
+import { FaGoogle } from 'react-icons/fa';
 
 const LoginPage = () => {
 
@@ -13,7 +14,7 @@ const LoginPage = () => {
     } = useForm()
 
     const handleLogicFunc = async (data) => {
-        const {email, password} = data
+        const { email, password } = data
 
         const { data: res, error } = await authClient.signIn.email({
             email: email,
@@ -56,10 +57,10 @@ const LoginPage = () => {
                         {errors.password && (<p className='text-red-500'>{errors.password.message}</p>)}
                     </fieldset>
 
-                    <button className="btn w-full bg-slate-800 text-white">
+                    <button className="btn w-full bg-linear-to-r from-[#384959] to-[#88BDF2] text-white">
                         Login
                     </button>
-                    <p className='mt-3 text-center'>Dont’t Have An Account ? <Link href={'/auth/register'} className='text-blue-500'>Register</Link></p>
+                    <p className='my-3 text-center'>Dont’t Have An Account ? <Link href={'/auth/register'} className='text-blue-500'>Register</Link></p>
                 </form>
             </div>
         </div>

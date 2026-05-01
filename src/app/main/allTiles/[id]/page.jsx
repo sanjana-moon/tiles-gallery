@@ -15,8 +15,8 @@ const CardDetailsPage = async ({ params }) => {
     );
 
     return (
-        <div className="container mx-auto lg:p-20 min-h-[80vh] p-20">
-            <div className="grid md:grid-cols-2 gap-5 bg-base-100 shadow-sm items-center p-3">
+        <div className="container mx-auto min-h-[80vh] py-5 lg:p-20 md:py-20">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 bg-base-100 shadow-sm items-center p-3">
                 <div className="rounded-2xl overflow-hidden shadow-lg">
                     <Image
                         src={card.image}

@@ -1,6 +1,7 @@
 'use client'
 import { authClient } from '@/lib/auth-client';
 import { useForm } from 'react-hook-form';
+import { FaGoogle } from 'react-icons/fa';
 
 const RegisterPage = () => {
 
@@ -11,8 +12,8 @@ const RegisterPage = () => {
         formState: { errors },
     } = useForm()
 
-    const handleRegisterFunc = async(data) => {
-        const {name, photo, email, password } = data;
+    const handleRegisterFunc = async (data) => {
+        const { name, photo, email, password } = data;
         const { data: res, error } = await authClient.signUp.email({
             name: name,
             email: email,
@@ -22,18 +23,24 @@ const RegisterPage = () => {
         });
 
         console.log(res, error);
-        if(error){
+        if (error) {
             alert(error.message)
         }
-        if(res){
+        if (res) {
             alert("signup successful")
         }
     }
 
+    const handleGoogleSignIn = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+        });
+    };
+
     return (
         <div className="container mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100 p-4 md:p-10">
             <div className="rounded-xl bg-white p-5 md:p-10 lg:p-20 ">
-                <h2 className="font-bold text-3xl text-center mb-6">
+                <h2 className="font-bold text-3xl text-center mb-6 text-[#384959]">
                     Register your account
                 </h2>
 
@@ -82,8 +89,15 @@ const RegisterPage = () => {
                         {errors.password && (<p className='text-red-500'>{errors.password.message}</p>)}
                     </fieldset>
 
-                    <button className="btn w-full bg-slate-800 text-white">
+                    <button className="btn w-full bg-linear-to-r from-[#384959] to-[#88BDF2] text-white">
                         Register
+                    </button>
+
+                    <button 
+                    onClick={handleGoogleSignIn} 
+                    className="btn w-full bg-linear-to-r from-[#384959] to-[#88BDF2] text-white">
+                        <FaGoogle />
+                        Login with google
                     </button>
                 </form>
             </div>

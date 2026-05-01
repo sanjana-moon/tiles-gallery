@@ -25,7 +25,7 @@ const Search = () => {
     }
 
     return (
-        <div className="">
+        <div className="w-full md:w-fit px-3">
             <div className='flex items-center'>
                 <label className="input">
                     <FaSearch className='text-[#384959]' />
