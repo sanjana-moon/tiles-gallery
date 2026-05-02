@@ -1,43 +1,72 @@
-import logo from "@/assets/Logo.png"
+import logo from "@/assets/Logo-2.png"
 import Image from 'next/image';
-import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaMailBulk, FaPhone, FaTimes, FaTwitter, FaYoutube } from "react-icons/fa";
+import { HiLocationMarker } from "react-icons/hi";
+import { MdAccessTimeFilled } from "react-icons/md";
 
 const Footer = () => {
     return (
         <div>
-            <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10 items-start">
+            <footer className="footer sm:footer-horizontal bg-[#384959] text-white border-b border-white p-10 items-start">
                 <aside>
-                    <Image
-                        src={logo}
-                        alt='logo'
-                        width={150}
-                        height={150}
-                        className='w-auto' />
-                    <p className="font-medium text-[#384959]">
-                        Tiles Gallery Ltd.
-                        <br />
-                        Providing reliable Tiles since 1992
-                    </p>
+                    <Image src={logo} alt='logo' width={150} height={150} className='w-auto mb-3' />
+                    <h2 className="font-medium text-3xl">Tiles Gallery</h2>
+                    <p>Providing reliable Tiles since 1992</p>
                 </aside>
+
                 <nav>
-                    <h6 className="footer-title">Services</h6>
+                    <h6 className="footer-title font-bold">Services</h6>
                     <a className="link link-hover">Branding</a>
                     <a className="link link-hover">Design</a>
                     <a className="link link-hover">Marketing</a>
                     <a className="link link-hover">Advertisement</a>
                 </nav>
+
                 <nav>
-                    <h6 className="footer-title">Company</h6>
+                    <h6 className="footer-title font-bold">Company</h6>
                     <a className="link link-hover">About us</a>
-                    <a className="link link-hover">Contact</a>
                     <a className="link link-hover">Jobs</a>
-                    <a className="link link-hover">Press kit</a>
-                </nav>
-                <nav>
-                    <h6 className="footer-title">Legal</h6>
-                    <a className="link link-hover">Terms of use</a>
+                    <a className="link link-hover">Press Kit</a>
+                    <a className="link link-hover mt-2 font-bold">Terms of use</a>
                     <a className="link link-hover">Privacy policy</a>
                     <a className="link link-hover">Cookie policy</a>
+                </nav>
+
+                <nav>
+                    <h6 className="footer-title font-bold">Contact Us</h6>  
+                    <p className="italic">Planning your space? Let's create a stunning look with us</p>
+
+                    <div className="flex gap-3 items-start">
+                        <HiLocationMarker className="mt-1" />
+                        <div>
+                            <p className="font-medium">Address</p>
+                            <p className="text-sm opacity-80">Your address here</p>
+                        </div>
+                    </div>
+
+                    <div className="flex gap-3 items-start">
+                        <FaPhone className="mt-1" />
+                        <div>
+                            <p className="font-medium">Phone</p>
+                            <p className="text-sm opacity-80">01*********</p>
+                        </div>
+                    </div>
+
+                    <div className="flex gap-3 items-start">
+                        <FaMailBulk className="mt-1" />
+                        <div>
+                            <p className="font-medium">Email</p>
+                            <p className="text-sm opacity-80">your@email.com</p>
+                        </div>
+                    </div>
+
+                    <div className="flex gap-3 items-start">
+                        <MdAccessTimeFilled className="mt-1" />
+                        <div>
+                            <p className="font-medium">Opening Hours</p>
+                            <p className="text-sm opacity-80">9:00 AM – 7:00 PM (Everyday)</p>
+                        </div>
+                    </div>
                 </nav>
             </footer>
 
