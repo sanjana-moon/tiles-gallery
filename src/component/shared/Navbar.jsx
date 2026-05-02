@@ -8,6 +8,8 @@ import Image from 'next/image';
 import NavLink from './NavLink';
 import { authClient } from '@/lib/auth-client';
 import { SyncLoader } from 'react-spinners';
+import { IoMdLogIn } from 'react-icons/io';
+import { IoLogIn, IoLogOut } from 'react-icons/io5';
 
 const Navbar = () => {
     const { data: session, isPending } = authClient.useSession()
@@ -80,10 +82,10 @@ const Navbar = () => {
                                     height={60}
                                     width={60}
                                     className='rounded-full h-auto' />
-                                <button onClick={async () => await authClient.signOut()} className='btn bg-linear-to-r from-[#384959] to-[#88BDF2] text-white'>Logout</button>
+                                <button onClick={async () => await authClient.signOut()} className='btn bg-linear-to-r from-[#384959] to-[#88BDF2] text-white'><IoLogOut /> Logout</button>
                             </div>
                         </div> :
-                            <Link href={'/auth/login'} className="btn bg-linear-to-r from-[#384959] to-[#88BDF2] text-neutral-content hover:from-[#88BDF2] hover:to-[#384959]">Login</Link>
+                            <Link href={'/auth/login'} className="btn bg-linear-to-r from-[#384959] to-[#88BDF2] text-neutral-content hover:from-[#88BDF2] hover:to-[#384959]"><IoLogIn /> Login</Link>
                     }
                 </div>
             </div>

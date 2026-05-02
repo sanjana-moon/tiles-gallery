@@ -1,7 +1,8 @@
 'use client'
 import { authClient } from '@/lib/auth-client';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { FaGoogle } from 'react-icons/fa';
+import { FaEye, FaEyeSlash, FaGoogle } from 'react-icons/fa';
 
 const RegisterPage = () => {
 
@@ -30,6 +31,8 @@ const RegisterPage = () => {
             alert("signup successful")
         }
     }
+
+    const [isShowPassword, setIsShowPassword] = useState(false);
 
     const handleGoogleSignIn = async () => {
         const data = await authClient.signIn.social({
@@ -82,11 +85,19 @@ const RegisterPage = () => {
                         <fieldset className="fieldset relative">
                             <legend className="fieldset-legend">Password</legend>
                             <input
-                                type="password"
+                                type={isShowPassword ? "text" : "password"}
                                 className="input w-full"
                                 placeholder="Enter your password"
-                                {...register("password", { required: "Password is required" })}
+                                {...register("password", {
+                                    required: "Password field is required",
+                                })}
                             />
+                            <span
+                                className="absolute right-8 top-4 cursor-pointer"
+                                onClick={() => setIsShowPassword(!isShowPassword)}
+                            >
+                                {isShowPassword ? <FaEye /> : <FaEyeSlash />}
+                            </span>
                             {errors.password && (<p className='text-red-500'>{errors.password.message}</p>)}
                         </fieldset>
 
