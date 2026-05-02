@@ -16,6 +16,7 @@ const Cards = ({ card }) => {
             <div className="card-body">
                 <h2 className="card-title">
                     {card.title}
+                    <div className="badge bg-linear-to-r from-[#384959] to-[#88BDF2] text-white absolute top-0 right-1">{card.tag}</div>
                 </h2>
                 <div className="card-actions justify-end">
                     <Link href={`/main/allTiles/tileDetails/${card.id}`}><button className="btn bg-linear-to-r from-[#384959] to-[#88BDF2]  hover:from-[#384959] hover:to-[#384959] text-white border-none">View Details</button></Link>

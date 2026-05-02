@@ -3,15 +3,15 @@
 import Link from 'next/link';
 import { RxActivityLog } from 'react-icons/rx';
 import logo from "@/assets/Logo.png"
+import userAvatar from "@/assets/user.png"
 import Image from 'next/image';
 import NavLink from './NavLink';
 import { authClient } from '@/lib/auth-client';
+import { SyncLoader } from 'react-spinners';
 
 const Navbar = () => {
     const { data: session, isPending } = authClient.useSession()
     const user = session?.user
-    console.log(user);
-
 
     const links = <>
         <li><NavLink href={'/'}>Home</NavLink></li>
@@ -48,7 +48,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    {isPending ? <span className="loading loading-spinner loading-lg"></span> :
+                    {isPending ? <SyncLoader color="#2f6ea8" /> :
                         user ? <div className='flex items-center gap-2'>
 
                             <p>Hello, {user.name}</p>
@@ -67,7 +67,7 @@ const Navbar = () => {
                                 <ul
                                     tabIndex="-1"
                                     className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 p-2 shadow">
-                                    <li><a>Profile</a></li>
+                                    <li><NavLink href={'/main/myProfile'}>My Profile</NavLink></li>
                                     <li><a>Settings</a></li>
                                     <li><button onClick={async () => await authClient.signOut()}>Logout</button></li>
                                 </ul>
