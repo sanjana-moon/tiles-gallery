@@ -9,7 +9,9 @@
         "currency": "USD",
         "dimensions": "80x80 cm",
         "material": "Marble",
-        "inStock": true
+        "inStock": true,
+        "creator": "Lorenzo Bianchi",
+        "tag": "Luxury"
     },
     {
         "id": "tile_002",
@@ -21,7 +23,9 @@
         "currency": "USD",
         "dimensions": "30x60 cm",
         "material": "Ceramic",
-        "inStock": false
+        "inStock": false,
+        "creator": "Amelia Chen",
+        "tag": "Blue"
     },
     {
         "id": "tile_003",
@@ -33,7 +37,9 @@
         "currency": "USD",
         "dimensions": "60x120 cm",
         "material": "Porcelain",
-        "inStock": true
+        "inStock": true,
+        "creator": "James Hartley",
+        "tag": "Natural"
     },
     {
         "id": "tile_004",
@@ -45,7 +51,9 @@
         "currency": "USD",
         "dimensions": "60x60 cm",
         "material": "Ceramic",
-        "inStock": true
+        "inStock": true,
+        "creator": "Sofia Delacroix",
+        "tag": "Gold"
     },
     {
         "id": "tile_005",
@@ -57,7 +65,9 @@
         "currency": "USD",
         "dimensions": "30x60 cm",
         "material": "Ceramic",
-        "inStock": true
+        "inStock": true,
+        "creator": "Marcus Reid",
+        "tag": "Minimalist"
     },
     {
         "id": "tile_006",
@@ -69,7 +79,9 @@
         "currency": "USD",
         "dimensions": "60x60 cm",
         "material": "Ceramic",
-        "inStock": true
+        "inStock": true,
+        "creator": "Nina Patel",
+        "tag": "Neutral"
     },
     {
         "id": "tile_007",
@@ -81,7 +93,9 @@
         "currency": "USD",
         "dimensions": "40x40 cm",
         "material": "Stone",
-        "inStock": true
+        "inStock": true,
+        "creator": "Ethan Kowalski",
+        "tag": "Outdoor"
     },
     {
         "id": "tile_008",
@@ -93,7 +107,9 @@
         "currency": "USD",
         "dimensions": "30x30 cm",
         "material": "Glass",
-        "inStock": false
+        "inStock": false,
+        "creator": "Isabella Moreno",
+        "tag": "Artistic"
     },
     {
         "id": "tile_009",
@@ -105,7 +121,9 @@
         "currency": "USD",
         "dimensions": "60x60 cm",
         "material": "Granite",
-        "inStock": false
+        "inStock": false,
+        "creator": "Liam Nguyen",
+        "tag": "Durable"
     },
     {
         "id": "tile_010",
@@ -117,7 +135,9 @@
         "currency": "USD",
         "dimensions": "60x60 cm",
         "material": "Ceramic",
-        "inStock": true
+        "inStock": true,
+        "creator": "Clara Hoffman",
+        "tag": "Minimalist"
     },
     {
         "id": "tile_011",
@@ -129,7 +149,9 @@
         "currency": "USD",
         "dimensions": "20x40 cm",
         "material": "Clay",
-        "inStock": true
+        "inStock": true,
+        "creator": "Owen Fletcher",
+        "tag": "Classic"
     },
     {
         "id": "tile_012",
@@ -141,7 +163,9 @@
         "currency": "USD",
         "dimensions": "60x60 cm",
         "material": "Ceramic",
-        "inStock": true
+        "inStock": true,
+        "creator": "Amelia Chen",
+        "tag": "Blue"
     },
     {
         "id": "tile_013",
@@ -153,7 +177,9 @@
         "currency": "USD",
         "dimensions": "60x60 cm",
         "material": "Concrete",
-        "inStock": true
+        "inStock": true,
+        "creator": "Marcus Reid",
+        "tag": "Industrial"
     },
     {
         "id": "tile_014",
@@ -165,7 +191,9 @@
         "currency": "USD",
         "dimensions": "60x60 cm",
         "material": "Ceramic",
-        "inStock": true
+        "inStock": true,
+        "creator": "Priya Sharma",
+        "tag": "Green"
     },
     {
         "id": "tile_015",
@@ -177,7 +205,9 @@
         "currency": "USD",
         "dimensions": "80x80 cm",
         "material": "Marble",
-        "inStock": true
+        "inStock": true,
+        "creator": "Lorenzo Bianchi",
+        "tag": "Elegant"
     },
     {
         "id": "tile_016",
@@ -189,7 +219,9 @@
         "currency": "USD",
         "dimensions": "30x30 cm",
         "material": "Ceramic",
-        "inStock": true
+        "inStock": true,
+        "creator": "Sofia Delacroix",
+        "tag": "Vintage"
     },
     {
         "id": "tile_017",
@@ -201,7 +233,9 @@
         "currency": "USD",
         "dimensions": "80x80 cm",
         "material": "Marble",
-        "inStock": true
+        "inStock": true,
+        "creator": "Lorenzo Bianchi",
+        "tag": "Premium"
     },
     {
         "id": "tile_018",
@@ -213,7 +247,9 @@
         "currency": "USD",
         "dimensions": "40x40 cm",
         "material": "Sandstone",
-        "inStock": true
+        "inStock": true,
+        "creator": "Ethan Kowalski",
+        "tag": "Outdoor"
     },
     {
         "id": "tile_019",
@@ -225,7 +261,9 @@
         "currency": "USD",
         "dimensions": "30x60 cm",
         "material": "Ceramic",
-        "inStock": true
+        "inStock": true,
+        "creator": "Nina Patel",
+        "tag": "Bathroom"
     },
     {
         "id": "tile_020",
@@ -237,7 +275,9 @@
         "currency": "USD",
         "dimensions": "60x60 cm",
         "material": "Porcelain",
-        "inStock": false
+        "inStock": false,
+        "creator": "Sofia Delacroix",
+        "tag": "Silver"
     },
     {
         "id": "tile_021",
@@ -249,7 +289,9 @@
         "currency": "USD",
         "dimensions": "60x60 cm",
         "material": "Clay",
-        "inStock": true
+        "inStock": true,
+        "creator": "Owen Fletcher",
+        "tag": "Earthy"
     },
     {
         "id": "tile_022",
@@ -261,7 +303,9 @@
         "currency": "USD",
         "dimensions": "60x60 cm",
         "material": "Ceramic",
-        "inStock": true
+        "inStock": true,
+        "creator": "Clara Hoffman",
+        "tag": "Glossy"
     },
     {
         "id": "tile_023",
@@ -273,7 +317,9 @@
         "currency": "USD",
         "dimensions": "60x60 cm",
         "material": "Stone",
-        "inStock": true
+        "inStock": true,
+        "creator": "Liam Nguyen",
+        "tag": "Dark"
     },
     {
         "id": "tile_024",
@@ -285,7 +331,9 @@
         "currency": "USD",
         "dimensions": "30x60 cm",
         "material": "Ceramic",
-        "inStock": true
+        "inStock": true,
+        "creator": "Priya Sharma",
+        "tag": "Pink"
     },
     {
         "id": "tile_025",
@@ -297,6 +345,162 @@
         "currency": "USD",
         "dimensions": "80x80 cm",
         "material": "Marble",
-        "inStock": true
+        "inStock": true,
+        "creator": "Sofia Delacroix",
+        "tag": "Gold"
+    },
+    {
+        "id": "tile_026",
+        "title": "Terracotta Earth Tile",
+        "description": "Warm terracotta tile for Mediterranean style interiors",
+        "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+        "category": "rustic",
+        "price": 36.0,
+        "currency": "USD",
+        "dimensions": "30x30 cm",
+        "material": "Clay",
+        "inStock": true,
+        "creator": "Owen Fletcher",
+        "tag": "Terracotta"
+    },
+    {
+        "id": "tile_027",
+        "title": "Pearl White Mosaic",
+        "description": "Elegant pearl white mosaic for bathroom walls",
+        "image": "https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?auto=format&fit=crop&w=800&q=80",
+        "category": "mosaic",
+        "price": 78.0,
+        "currency": "USD",
+        "dimensions": "30x30 cm",
+        "material": "Glass",
+        "inStock": true,
+        "creator": "Isabella Moreno",
+        "tag": "Mosaic"
+    },
+    {
+        "id": "tile_028",
+        "title": "Charcoal Concrete Tile",
+        "description": "Deep charcoal concrete finish for urban interiors",
+        "image": "https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=800&q=80",
+        "category": "concrete",
+        "price": 51.0,
+        "currency": "USD",
+        "dimensions": "60x60 cm",
+        "material": "Concrete",
+        "inStock": true,
+        "creator": "Marcus Reid",
+        "tag": "Urban"
+    },
+    {
+        "id": "tile_029",
+        "title": "Honey Oak Wood Tile",
+        "description": "Warm honey oak wood-effect porcelain tile",
+        "image": "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=800&q=80",
+        "category": "wood",
+        "price": 47.5,
+        "currency": "USD",
+        "dimensions": "20x120 cm",
+        "material": "Porcelain",
+        "inStock": true,
+        "creator": "James Hartley",
+        "tag": "Warm"
+    },
+    {
+        "id": "tile_030",
+        "title": "Rose Gold Luxury Tile",
+        "description": "Glamorous rose gold finish tile for accent walls",
+        "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80",
+        "category": "luxury",
+        "price": 145.0,
+        "currency": "USD",
+        "dimensions": "60x60 cm",
+        "material": "Porcelain",
+        "inStock": true,
+        "creator": "Sofia Delacroix",
+        "tag": "Glamorous"
+    },
+    {
+        "id": "tile_031",
+        "title": "Ash Grey Granite",
+        "description": "Smooth ash grey granite tile for modern floors",
+        "image": "https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=800&q=80",
+        "category": "granite",
+        "price": 72.0,
+        "currency": "USD",
+        "dimensions": "60x60 cm",
+        "material": "Granite",
+        "inStock": true,
+        "creator": "Liam Nguyen",
+        "tag": "Grey"
+    },
+    {
+        "id": "tile_032",
+        "title": "Cobalt Blue Decorative",
+        "description": "Bold cobalt blue handcrafted decorative tile",
+        "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+        "category": "decorative",
+        "price": 62.0,
+        "currency": "USD",
+        "dimensions": "20x20 cm",
+        "material": "Ceramic",
+        "inStock": true,
+        "creator": "Priya Sharma",
+        "tag": "Bold"
+    },
+    {
+        "id": "tile_033",
+        "title": "Exposed Red Brick Tile",
+        "description": "Classic exposed red brick tile for feature walls",
+        "image": "https://images.unsplash.com/photo-1583845112203-29329902332e?auto=format&fit=crop&w=800&q=80",
+        "category": "brick",
+        "price": 35.0,
+        "currency": "USD",
+        "dimensions": "20x40 cm",
+        "material": "Clay",
+        "inStock": false,
+        "creator": "Owen Fletcher",
+        "tag": "Classic"
+    },
+    {
+        "id": "tile_034",
+        "title": "Sage Green Matt Tile",
+        "description": "Calming sage green matte ceramic tile",
+        "image": "https://images.unsplash.com/photo-1600585152915-d208bec867a1?auto=format&fit=crop&w=800&q=80",
+        "category": "ceramic",
+        "price": 44.5,
+        "currency": "USD",
+        "dimensions": "30x60 cm",
+        "material": "Ceramic",
+        "inStock": true,
+        "creator": "Amelia Chen",
+        "tag": "Green"
+    },
+    {
+        "id": "tile_035",
+        "title": "Black Slate Stone Tile",
+        "description": "Natural black slate for dramatic floor and wall designs",
+        "image": "https://images.unsplash.com/photo-1598300056393-4aac492f4344?auto=format&fit=crop&w=800&q=80",
+        "category": "stone",
+        "price": 74.0,
+        "currency": "USD",
+        "dimensions": "40x40 cm",
+        "material": "Slate",
+        "inStock": true,
+        "creator": "Ethan Kowalski",
+        "tag": "Dramatic"
+    },
+    {
+        "id": "tile_036",
+        "title": "Venetian Marble Tile",
+        "description": "Classic Venetian marble with intricate grey veining",
+        "image": "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=800&q=80",
+        "category": "marble",
+        "price": 115.0,
+        "currency": "USD",
+        "dimensions": "80x80 cm",
+        "material": "Marble",
+        "inStock": true,
+        "creator": "Lorenzo Bianchi",
+        "tag": "Venetian"
     }
 ]

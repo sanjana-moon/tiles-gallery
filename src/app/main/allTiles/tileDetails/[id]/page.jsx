@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const CardDetailsPage = async ({ params }) => {
     const { id } = await params
-;
+        ;
     const cards = await getCards();
     const card = cards.find(card => card.id == id)
 
@@ -16,7 +16,7 @@ const CardDetailsPage = async ({ params }) => {
 
     return (
         <div className="container mx-auto min-h-[80vh] py-5 lg:p-20 md:py-20">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 bg-base-100 shadow-sm items-center p-3">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 bg-base-100 shadow-sm items-center p-3 relative">
                 <div className="rounded-2xl overflow-hidden shadow-lg">
                     <Image
                         src={card.image}
@@ -27,14 +27,28 @@ const CardDetailsPage = async ({ params }) => {
                     />
                 </div>
                 <div className="">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[#384959] mb-4">{card.title}</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-[#384959] mb-4 ">
+                        {card.title}
+                        <div className="badge bg-linear-to-r from-[#384959] to-[#88BDF2] text-white absolute top-1 right-2">
+                            {card.tag}</div></h2>
                     <p className="text-gray-600 mb-6">{card.description}</p>
-                    <div className="space-y-3 text-[#384959]">
-                        <p><strong>Price:</strong> ${card.price}</p>
-                        <p><strong>Category:</strong> {card.category}</p>
-                        <p><strong>Material:</strong> {card.material}</p>
-                        <p><strong>Dimensions:</strong> {card.dimensions}</p>
-                        <p><strong>Status:</strong> {stock}</p>
+                    <div className="space-y-3 text-[#384959] flex gap-4">
+                        <div className="font-semibold space-y-3">
+                            <p>Price</p>
+                            <p>Category</p>
+                            <p>Material</p>
+                            <p>Dimensions</p>
+                            <p>Creator</p>
+                            <p>Status</p>
+                        </div>
+                        <div className="space-y-3">
+                            <p>: {card.price}$</p>
+                            <p>: {card.category}</p>
+                            <p>: {card.material}</p>
+                            <p>: {card.dimensions}</p>
+                            <p>: {card.creator}</p>
+                            <p>: {stock}</p>
+                        </div>
                     </div>
 
                     <div className="mt-8 flex gap-6 justify-end">

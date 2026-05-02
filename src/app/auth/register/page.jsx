@@ -38,68 +38,70 @@ const RegisterPage = () => {
     };
 
     return (
-        <div className="container mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100 p-4 md:p-10">
-            <div className="rounded-xl bg-white p-5 md:p-10 lg:p-20 ">
-                <h2 className="font-bold text-3xl text-center mb-6 text-[#384959]">
-                    Register your account
-                </h2>
+        <div className=' bg-slate-100 '>
+            <div className="container mx-auto min-h-[80vh] flex justify-center items-center p-4 md:p-10 pb-15">
+                <div className="rounded-xl bg-white p-5 md:p-10 lg:p-20 ">
+                    <h2 className="font-bold text-3xl text-center mb-6 text-[#384959]">
+                        Register your account
+                    </h2>
 
-                <form className="space-y-4" onSubmit={handleSubmit(handleRegisterFunc)}>
-                    <fieldset className="fieldset">
-                        <legend className="fieldset-legend">Name</legend>
-                        <input
-                            type="text"
-                            className="input w-full"
-                            placeholder="Enter your name"
-                            {...register("name", { required: "Name is required" })}
-                        />
-                        {errors.name && (<p className='text-red-500'>{errors.name.message}</p>)}
-                    </fieldset>
+                    <form className="space-y-4" onSubmit={handleSubmit(handleRegisterFunc)}>
+                        <fieldset className="fieldset">
+                            <legend className="fieldset-legend">Name</legend>
+                            <input
+                                type="text"
+                                className="input w-full"
+                                placeholder="Enter your name"
+                                {...register("name", { required: "Name is required" })}
+                            />
+                            {errors.name && (<p className='text-red-500'>{errors.name.message}</p>)}
+                        </fieldset>
 
-                    <fieldset className="fieldset">
-                        <legend className="fieldset-legend">Photo URL</legend>
-                        <input
-                            type="text"
-                            className="input w-full"
-                            placeholder="Enter your photo url"
-                            {...register("photo", { required: "Photo URL is required" })}
-                        />
-                        {errors.photo && (<p className='text-red-500'>{errors.photo.message}</p>)}
-                    </fieldset>
+                        <fieldset className="fieldset">
+                            <legend className="fieldset-legend">Photo URL</legend>
+                            <input
+                                type="text"
+                                className="input w-full"
+                                placeholder="Enter your photo url"
+                                {...register("photo", { required: "Photo URL is required" })}
+                            />
+                            {errors.photo && (<p className='text-red-500'>{errors.photo.message}</p>)}
+                        </fieldset>
 
-                    <fieldset className="fieldset">
-                        <legend className="fieldset-legend">Email</legend>
-                        <input
-                            type="email"
-                            className="input w-full"
-                            placeholder="Enter your email"
-                            {...register("email", { required: "Email is required" })}
-                        />
-                        {errors.email && (<p className='text-red-500'>{errors.email.message}</p>)}
-                    </fieldset>
+                        <fieldset className="fieldset">
+                            <legend className="fieldset-legend">Email</legend>
+                            <input
+                                type="email"
+                                className="input w-full"
+                                placeholder="Enter your email"
+                                {...register("email", { required: "Email is required" })}
+                            />
+                            {errors.email && (<p className='text-red-500'>{errors.email.message}</p>)}
+                        </fieldset>
 
-                    <fieldset className="fieldset relative">
-                        <legend className="fieldset-legend">Password</legend>
-                        <input
-                            type="password"
-                            className="input w-full"
-                            placeholder="Enter your password"
-                            {...register("password", { required: "Password is required" })}
-                        />
-                        {errors.password && (<p className='text-red-500'>{errors.password.message}</p>)}
-                    </fieldset>
+                        <fieldset className="fieldset relative">
+                            <legend className="fieldset-legend">Password</legend>
+                            <input
+                                type="password"
+                                className="input w-full"
+                                placeholder="Enter your password"
+                                {...register("password", { required: "Password is required" })}
+                            />
+                            {errors.password && (<p className='text-red-500'>{errors.password.message}</p>)}
+                        </fieldset>
 
-                    <button className="btn w-full bg-linear-to-r from-[#384959] to-[#88BDF2] text-white">
-                        Register
-                    </button>
-
-                    <button 
-                    onClick={handleGoogleSignIn} 
-                    className="btn w-full bg-linear-to-r from-[#384959] to-[#88BDF2] text-white">
-                        <FaGoogle />
-                        Login with google
-                    </button>
-                </form>
+                        <button className="btn w-full bg-linear-to-r from-[#384959] to-[#88BDF2] text-white">
+                            Register
+                        </button>
+                        <p className='text-center font-bold text-[#384959]'>OR</p>
+                        <button
+                            onClick={handleGoogleSignIn}
+                            className="btn w-full bg-linear-to-r from-[#384959] to-[#88BDF2] text-white">
+                            <FaGoogle />
+                            Login with google
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     );
