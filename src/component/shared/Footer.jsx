@@ -27,7 +27,7 @@ const Footer = () => {
                     <a className="link link-hover">About us</a>
                     <a className="link link-hover">Jobs</a>
                     <a className="link link-hover">Press Kit</a>
-                    <a className="link link-hover mt-2 font-bold">Terms of use</a>
+                    <a className="link link-hover mt-6 font-bold">Terms of use</a>
                     <a className="link link-hover">Privacy policy</a>
                     <a className="link link-hover">Cookie policy</a>
                 </nav>
