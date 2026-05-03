@@ -8,8 +8,8 @@ const TopTilesSection = async () => {
 
     return (
         <div className="container mx-auto mb-20 p-6 border-b pb-20 border-gray-300">
-            <h3 className="text-3xl mb-6 font-bold text-[#384959]">Our Top Collection:</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <h3 className="text-3xl mb-6 font-bold text-[#384959] animate__animated animate__backInLeft">Our Top Collection:</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5  animate__animated animate__fadeInUp">
                 {
                     topCards.map(card => <Cards key={card.id} card={card} />)
                 }

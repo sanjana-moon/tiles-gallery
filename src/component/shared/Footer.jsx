@@ -6,11 +6,14 @@ import { MdAccessTimeFilled } from "react-icons/md";
 
 const Footer = () => {
     return (
-        <div>
+        <div className="animate__animated animate__backInLeft">
             <footer className="footer sm:footer-horizontal bg-[#384959] text-white border-b border-white p-10 items-start">
                 <aside>
                     <Image src={logo} alt='logo' width={150} height={150} className='w-auto mb-3' />
                     <h2 className="font-medium text-3xl">Tiles Gallery</h2>
+                    <p className="text-sm opacity-80 mt-2">
+                        Style. Strength. Satisfaction.
+                    </p>
                     <p>Providing reliable Tiles since 1992</p>
                 </aside>
 
@@ -33,7 +36,7 @@ const Footer = () => {
                 </nav>
 
                 <nav>
-                    <h6 className="footer-title font-bold">Contact Us</h6>  
+                    <h6 className="footer-title font-bold">Contact Us</h6>
                     <p className="italic">Planning your space? <br /> Let's create a stunning look with us!</p>
 
                     <div className="flex gap-3 items-start">
