@@ -27,20 +27,20 @@ const Footer = () => {
                     <a className="link link-hover">About us</a>
                     <a className="link link-hover">Jobs</a>
                     <a className="link link-hover">Press Kit</a>
-                    <a className="link link-hover mt-6 font-bold">Terms of use</a>
+                    <a className="link link-hover mt-6 font-bold text-lg text-gray-400">Terms of use</a>
                     <a className="link link-hover">Privacy policy</a>
                     <a className="link link-hover">Cookie policy</a>
                 </nav>
 
                 <nav>
                     <h6 className="footer-title font-bold">Contact Us</h6>  
-                    <p className="italic">Planning your space? Let's create a stunning look with us</p>
+                    <p className="italic">Planning your space? <br /> Let's create a stunning look with us!</p>
 
                     <div className="flex gap-3 items-start">
                         <HiLocationMarker className="mt-1" />
                         <div>
                             <p className="font-medium">Address</p>
-                            <p className="text-sm opacity-80">Your address here</p>
+                            <p className="text-sm opacity-80">House #00, Road #00, <br /> Block X, Dhaka 0000</p>
                         </div>
                     </div>
 
@@ -56,7 +56,7 @@ const Footer = () => {
                         <FaMailBulk className="mt-1" />
                         <div>
                             <p className="font-medium">Email</p>
-                            <p className="text-sm opacity-80">your@email.com</p>
+                            <p className="text-sm opacity-80">tilesgallery@email.com</p>
                         </div>
                     </div>
 
