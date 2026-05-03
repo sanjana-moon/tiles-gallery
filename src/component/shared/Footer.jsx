@@ -6,7 +6,7 @@ import { MdAccessTimeFilled } from "react-icons/md";
 
 const Footer = () => {
     return (
-        <div className="animate__animated animate__backInLeft">
+        <div className="animate__animated animate__backInUp">
             <footer className="footer sm:footer-horizontal bg-[#384959] text-white border-b border-white p-10 items-start">
                 <aside>
                     <Image src={logo} alt='logo' width={150} height={150} className='w-auto mb-3' />
@@ -15,6 +15,7 @@ const Footer = () => {
                         Style. Strength. Satisfaction.
                     </p>
                     <p>Providing reliable Tiles since 1992</p>
+                    <p>Transform your spaces with elegant designs <br /> and durable tile solutions.</p>
                 </aside>
 
                 <nav>
@@ -23,17 +24,14 @@ const Footer = () => {
                     <a className="link link-hover">Design</a>
                     <a className="link link-hover">Marketing</a>
                     <a className="link link-hover">Advertisement</a>
-                </nav>
 
-                <nav>
-                    <h6 className="footer-title font-bold">Company</h6>
+                    <h6 className="footer-title font-bold mt-6">Company</h6>
                     <a className="link link-hover">About us</a>
                     <a className="link link-hover">Jobs</a>
                     <a className="link link-hover">Press Kit</a>
-                    <a className="link link-hover mt-6 font-bold text-lg text-gray-400">Terms of use</a>
-                    <a className="link link-hover">Privacy policy</a>
-                    <a className="link link-hover">Cookie policy</a>
                 </nav>
+
+
 
                 <nav>
                     <h6 className="footer-title font-bold">Contact Us</h6>
@@ -77,6 +75,10 @@ const Footer = () => {
                 <aside className="grid-flow-col items-center">
                     <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
                 </aside>
+                <nav className="flex gap-5">
+                    <a className="link link-hover">Privacy policy</a>
+                    <a className="link link-hover">Cookie policy</a>
+                </nav>
                 <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
                     <FaTwitter className="w-6 h-6" />
                     <FaYoutube className="w-6 h-6" />
