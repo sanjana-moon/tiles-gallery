@@ -19,14 +19,14 @@ const AllTilesPage = async ({ searchParams }) => {
 
     return (
         <div className="container mx-auto my-8">
-            <div className="flex justify-between items-center flex-col-reverse gap-4 md:flex-row">
+            <div className="flex justify-between items-center flex-col-reverse gap-4 md:flex-row ">
                 <CategoryFilter />
                 <Search />
             </div>
-            <div>
+            <div className="animate__animated animate__fadeIn">
                 {
                     filteredCards.length === 0 ? (<NoTilesCard />) :
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-8 gap-5 relative">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 my-8 gap-5 relative">
                             {
                                 filteredCards.map(card => <Cards key={card.id} card={card} />)
                             }

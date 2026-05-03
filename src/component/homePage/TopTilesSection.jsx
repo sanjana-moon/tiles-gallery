@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Cards from "../cards/Cards";
 import { getCards } from "../cards/getCards";
 
@@ -13,6 +14,7 @@ const TopTilesSection = async () => {
                     topCards.map(card => <Cards key={card.id} card={card} />)
                 }
             </div>
+            <Link href={'/main/allTiles'} className="flex justify-center item-center"><button className="btn bg-linear-to-r from-[#384959] to-[#88BDF2] my-10 hover:from-[#88BDF2] hover:to-[#384959] text-white border-none">Explore more</button></Link>
         </div>
     );
 };
