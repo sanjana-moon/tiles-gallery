@@ -52,9 +52,11 @@ const CardDetailsPage = async ({ params }) => {
                         </div>
 
                         <div className="mt-8 flex gap-6 justify-end">
-                            <button className="btn bg-linear-to-r from-[#384959] to-[#88BDF2] hover:from-[#384959] hover:to-[#384959] text-white border-none">
-                                Buy Now
-                            </button>
+                            <Link href={"/main/buyTiles"}>
+                                <button className="btn bg-linear-to-r from-[#384959] to-[#88BDF2] hover:from-[#384959] hover:to-[#384959] text-white border-none">
+                                    Buy Now
+                                </button>
+                            </Link>
                             <Link href="/main/allTiles">
                                 <button className="btn bg-linear-to-r from-[#384959] to-[#88BDF2] hover:from-[#384959] hover:to-[#384959] text-white hover:bg-[#2f3d4a] border-none">
                                     Back to All Tiles
