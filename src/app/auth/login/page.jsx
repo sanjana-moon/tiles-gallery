@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 
 const LoginPage = () => {
@@ -26,7 +27,13 @@ const LoginPage = () => {
             rememberMe: true,
             callbackURL: "/",
         });
-
+        console.log(res, error);
+        if (error) {
+            toast.warning(error.message)
+        }
+        if (res) {
+            toast.success("signup successful")
+        }
     }
 
     return (

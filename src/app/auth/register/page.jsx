@@ -1,10 +1,13 @@
 'use client'
 import { authClient } from '@/lib/auth-client';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaEye, FaEyeSlash, FaGoogle } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 const RegisterPage = () => {
+    const router = useRouter()
 
     const {
         register,
@@ -25,10 +28,11 @@ const RegisterPage = () => {
 
         console.log(res, error);
         if (error) {
-            alert(error.message)
+            toast.warning(error.message)
         }
         if (res) {
-            alert("signup successful")
+            toast.success("signup successful")
+            router.push('/')
         }
     }
 

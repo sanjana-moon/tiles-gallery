@@ -8,8 +8,8 @@ import Image from 'next/image';
 import NavLink from './NavLink';
 import { authClient } from '@/lib/auth-client';
 import { SyncLoader } from 'react-spinners';
-import { IoMdLogIn } from 'react-icons/io';
 import { IoLogIn, IoLogOut } from 'react-icons/io5';
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
     const { data: session, isPending } = authClient.useSession()
@@ -71,7 +71,12 @@ const Navbar = () => {
                                     className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 p-2 shadow">
                                     <li><NavLink href={'/main/myProfile'}>My Profile</NavLink></li>
                                     <li><a>Settings</a></li>
-                                    <li><button onClick={async () => await authClient.signOut()}>Logout</button></li>
+                                    <li><button
+                                        onClick={async () => {
+                                            await authClient.signOut()
+                                            toast.success('Logged out successfully!');
+                                        }}>
+                                        Logout</button></li>
                                 </ul>
                             </div>
 
@@ -82,7 +87,13 @@ const Navbar = () => {
                                     height={60}
                                     width={60}
                                     className='rounded-full h-auto' />
-                                <button onClick={async () => await authClient.signOut()} className='btn bg-linear-to-r from-[#384959] to-[#88BDF2] text-white'><IoLogOut /> Logout</button>
+                                <button
+                                    onClick={async () => {
+                                        await authClient.signOut();
+                                        toast.success('Logged out successfully!')
+                                    }}
+                                    className='btn bg-linear-to-r from-[#384959] to-[#88BDF2] text-white'>
+                                    <IoLogOut /> Logout</button>
                             </div>
                         </div> :
                             <Link href={'/auth/login'} className="btn bg-linear-to-r from-[#384959] to-[#88BDF2] text-neutral-content hover:from-[#88BDF2] hover:to-[#384959]"><IoLogIn /> Login</Link>

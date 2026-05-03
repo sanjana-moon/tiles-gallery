@@ -21,12 +21,12 @@ const CategoryFilter = () => {
 
     return (
         <div>
-            <div>
+            <div className='border pl-2 rounded-lg border-gray-400 m-2'>
                 <label tabIndex={0} role="button" className='mr-2 font-medium'>Filter by category: </label>
                 <select
                 value={searchParams.get('category') || ''}
                     onChange={(e) => handleCategory(e.target.value)}
-                    className="bg-base-100 rounded-box w-52 p-2 shadow-sm">
+                    className="bg-base-100 rounded-box w-48 p-2 shadow-sm">
                     <option value="">All tiles</option>
                     <option value="ceramic">Ceramic</option>
                     <option value="wood">Wood</option>

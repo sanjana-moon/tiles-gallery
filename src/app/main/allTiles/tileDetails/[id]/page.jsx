@@ -40,7 +40,7 @@ const CardDetailsPage = async ({ params }) => {
                                 <p>Material</p>
                                 <p>Dimensions</p>
                                 <p>Creator</p>
-                                <p>Status</p>
+                                <p>{stock}</p>
                             </div>
                             <div className="space-y-3">
                                 <p>: {card.price}$</p>
@@ -48,7 +48,6 @@ const CardDetailsPage = async ({ params }) => {
                                 <p>: {card.material}</p>
                                 <p>: {card.dimensions}</p>
                                 <p>: {card.creator}</p>
-                                <p>: {stock}</p>
                             </div>
                         </div>
 

@@ -1,6 +1,6 @@
 import logo from "@/assets/Logo-2.png"
 import Image from 'next/image';
-import { FaFacebook, FaMailBulk, FaPhone, FaTimes, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaMailBulk, FaPhone, FaTwitter, FaYoutube } from "react-icons/fa";
 import { HiLocationMarker } from "react-icons/hi";
 import { MdAccessTimeFilled } from "react-icons/md";
 
