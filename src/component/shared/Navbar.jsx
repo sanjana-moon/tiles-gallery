@@ -24,7 +24,7 @@ const Navbar = () => {
     return (
         <div className='navbar bg-base-100 shadow-sm sticky top-0 left-0 z-1'>
             <div className="navbar mx-auto px-0 md:px-5 py-0">
-                <div className="navbar-start">
+                <div className="navbar-start animate__animated animate__fadeInLeft">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                             <RxActivityLog />
@@ -44,12 +44,12 @@ const Navbar = () => {
                         className='w-auto'
                     />
                 </div>
-                <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 font-medium gap-2">
+                <div className="navbar-center hidden lg:flex animate__animated animate__zoomIn">
+                    <ul className="menu menu-horizontal px-1 font-medium gap-2 animate__animated animate__fadeInLeft">
                         {links}
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end animate__animated animate__fadeInRight">
                     {isPending ? <SyncLoader color="#2f6ea8" /> :
                         user ? <div className='flex items-center gap-2'>
 

@@ -18,7 +18,7 @@ const CardDetailsPage = async ({ params }) => {
         <div className="bg-base-200">
             <div className="container mx-auto min-h-[80vh] py-5 lg:p-20 md:py-20">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 bg-base-100 shadow-sm items-center p-3 relative rounded-xl min-h-[60vh] lg:px-10">
-                    <div className="rounded-xl overflow-hidden shadow-lg">
+                    <div className="rounded-xl overflow-hidden shadow-lg animate__animated animate__zoomIn">
                         <Image
                             src={card.image}
                             alt={card.title}

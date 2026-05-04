@@ -35,11 +35,11 @@ const Banner = () => {
                                     <h1 className="mb-5 text-5xl font-bold animate__animated animate__fadeInDown">
                                         Discover Your Perfect Aesthetic
                                     </h1>
-                                    <p className="mb-5 animate__animated animate__fadeInUp">
+                                    <p className="mb-5 animate__animated animate__zoomIn">
                                         Step into a world of stunning tile designs where creativity meets craftsmanship. Discover elegant textures, vibrant colors, and timeless patterns that bring life to your interiors. Your perfect aesthetic starts here.
                                     </p>
                                     <Link href={'/main/allTiles'}>
-                                        <button className="btn bg-linear-to-r from-[#384959] to-[#88BDF2] text-white border-none animate__animated animate__zoomIn">
+                                        <button className="btn bg-linear-to-r from-[#384959] to-[#88BDF2] text-white border-none animate__animated animate__fadeInUp">
                                             Browse now
                                         </button>
                                     </Link>
