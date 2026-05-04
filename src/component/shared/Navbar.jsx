@@ -11,10 +11,12 @@ import { SyncLoader } from 'react-spinners';
 import { IoLogIn, IoLogOut } from 'react-icons/io5';
 import { toast } from 'react-toastify';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 const Navbar = () => {
     const { data: session, isPending } = authClient.useSession()
     const user = session?.user
+    const router = useRouter();
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
@@ -31,13 +33,19 @@ const Navbar = () => {
         {user && <li onClick={() => setIsMobileMenuOpen(false)}><NavLink href={'/main/myProfile'}>My Profile</NavLink></li>}
     </>;
 
+    const handleLogout = async () => {
+        setIsUserMenuOpen(false);
+        await authClient.signOut();
+        toast.success('Logged out successfully!');
+        router.push('/auth/login');
+        router.refresh();
+    }
+
     return (
-        
         <div className='navbar bg-base-100 shadow-sm sticky top-0 left-0 z-[999]'>
             <div className="navbar mx-auto px-0 md:px-5 py-0">
                 <div className="navbar-start animate__animated animate__fadeInLeft">
                     
-                    {/* LEFT MOBILE MENU */}
                     <div className="dropdown relative">
                         <div 
                             role="button" 
@@ -47,7 +55,6 @@ const Navbar = () => {
                             <RxActivityLog />
                         </div>
                         
-                      
                         {isMobileMenuOpen && (
                             <ul className="menu menu-sm absolute bg-base-100 rounded-box z-[999] mt-3 w-52 p-2 shadow font-medium left-0">
                                 {mobileLinks}
@@ -76,7 +83,6 @@ const Navbar = () => {
 
                             <p>Hello, {user.name}</p>
 
-                          
                             <div className="dropdown dropdown-end flex md:hidden relative">
                                 <div 
                                     role="button" 
@@ -93,18 +99,12 @@ const Navbar = () => {
                                     </div>
                                 </div>
                                 
-                        
                                 {isUserMenuOpen && (
                                     <ul className="menu menu-sm absolute bg-base-100 rounded-box z-[999] mt-3 p-2 shadow right-0 top-12 w-52">
                                         <li onClick={() => setIsUserMenuOpen(false)}><NavLink href={'/main/myProfile'}>My Profile</NavLink></li>
                                         <li onClick={() => setIsUserMenuOpen(false)}><a>Settings</a></li>
                                         <li>
-                                            <button
-                                                onClick={async () => {
-                                                    setIsUserMenuOpen(false);
-                                                    await authClient.signOut()
-                                                    toast.success('Logged out successfully!');
-                                                }}>
+                                            <button onClick={handleLogout}>
                                                 Logout
                                             </button>
                                         </li>
@@ -120,12 +120,10 @@ const Navbar = () => {
                                     width={60}
                                     className='rounded-full h-auto' />
                                 <button
-                                    onClick={async () => {
-                                        await authClient.signOut();
-                                        toast.success('Logged out successfully!')
-                                    }}
+                                    onClick={handleLogout}
                                     className='btn bg-linear-to-r from-[#384959] to-[#88BDF2] text-white'>
-                                    <IoLogOut /> Logout</button>
+                                    <IoLogOut /> Logout
+                                </button>
                             </div>
                         </div> :
                             <Link href={'/auth/login'} className="btn bg-linear-to-r from-[#384959] to-[#88BDF2] text-neutral-content hover:from-[#88BDF2] hover:to-[#384959]"><IoLogIn /> Login</Link>
@@ -135,5 +133,6 @@ const Navbar = () => {
         </div>
     );
 };
+
 
 export default Navbar;

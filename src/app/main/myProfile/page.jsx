@@ -1,14 +1,26 @@
 'use client'
+
 import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import userAvatar from "@/assets/user.png"
 import UpdateProfile from "@/component/udateProfile/UpdateProfile";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 const MyProfilePage = () => {
     const { data: session, isPending } = authClient.useSession()
     const user = session?.user
+    const router = useRouter();
 
-    console.log(user);
+    useEffect(() => {
+        if (!isPending && !user) {
+            router.push('/auth/login');
+        }
+    }, [isPending, user, router]);
+
+    if (isPending || !user) {
+        return <div className="min-h-[80vh] flex justify-center items-center">Loading...</div>;
+    }
 
     return (
         <div className="container mx-auto flex justify-center items-center min-h-[80vh]">
@@ -24,7 +36,6 @@ const MyProfilePage = () => {
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">Name: {user?.name}</h2>
                     <p>Email: {user?.email}</p>
-                    {/* <p>Created at: {user?.createdAt}</p> */}
                     <div className="card-actions">
                         <UpdateProfile/>
                     </div>
